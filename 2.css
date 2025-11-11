@@ -1,0 +1,65 @@
+    /* Tipografía técnica */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+  background-color: #0a0a0a;
+  color: #00ffcc;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Panel HUD */
+.hud-panel {
+  border: 1px solid #00ffcc;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 255, 204, 0.05);
+  box-shadow: 0 0 10px #00ffcc33;
+  position: relative;
+}
+
+/* Líneas vectoriales */
+.hud-panel::before,
+.hud-panel::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #00ffcc;
+}
+
+.hud-panel::before {
+  top: 0;
+  left: 0;
+}
+
+.hud-panel::after {
+  bottom: 0;
+  right: 0;
+}
+
+/* Indicadores */
+.hud-indicator {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border: 1px dashed #00ffcc;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  background-color: rgba(0, 255, 204, 0.1);
+}
+
+/* Animación tipo escaneo */
+.scan-line {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, transparent, #00ffcc, transparent);
+  animation: scan 2s linear infinite;
+  margin-top: 1rem;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
